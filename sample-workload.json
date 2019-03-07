@@ -1,0 +1,25 @@
+{
+    "Parameters": {
+        "ImageId": {
+            "Description": "The image id to be used.",
+            "Type": "String"
+        },
+        "InstanceType": {
+            "Description": "Instance Type of the workload instance.",
+            "Type": "String"
+        }
+    },
+    "Resources": {
+        "Ec2Instance": {
+            "Properties": {
+                "ImageId": {
+                    "Ref": "ImageId"
+                },
+                "InstanceType": {
+                    "Ref": "InstanceType"
+                }
+            },
+            "Type": "AWS::EC2::Instance"
+        }
+    }
+  }
